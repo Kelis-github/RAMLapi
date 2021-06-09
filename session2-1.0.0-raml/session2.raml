@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: session 2
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/08c97aa5-dd44-4e16-af41-43ef97c34e2f
+/search:
+  get:
+    queryParameters:
+      keyword:
+        description: this is the query para which is requested 
+        type: string
+        required: false
+        minLength: 3
+        maxLength: 10
+    responses:
+        200:
+            body:
+                application/json:
+                    example:
+                     {"message": "result returned succcesfully"}
+                                
